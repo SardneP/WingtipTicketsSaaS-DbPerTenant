@@ -4,10 +4,10 @@
   It simplifies catalog management by focusing on operations done to a tenant and tenant databases.
 #>
 
-Import-Module $PSScriptRoot\..\WtpConfig.psm1 -Force
-Import-Module $PSScriptRoot\..\ProvisionConfig.psm1 -Force
-Import-Module $PSScriptRoot\AzureShardManagement.psm1 -Force
-Import-Module $PSScriptRoot\SubscriptionManagement.psm1 -Force
+Import-Module $PSScriptRoot\..\WtpConfig -Force
+Import-Module $PSScriptRoot\..\ProvisionConfig -Force
+Import-Module $PSScriptRoot\AzureShardManagement -Force
+Import-Module $PSScriptRoot\SubscriptionManagement -Force
 Import-Module sqlserver -ErrorAction SilentlyContinue
 
 # Stop execution on error
