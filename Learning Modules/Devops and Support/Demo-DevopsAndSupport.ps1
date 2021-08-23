@@ -19,7 +19,7 @@ $DemoScenario = 1
 
 ## ------------------------------------------------------------------------------------------------
 
-Import-Module "$PSScriptRoot\..\Common\CatalogAndDatabaseManagement" -Force
+Import-Module "$PSScriptRoot\..\Common\CatalogAndDatabaseManagement.psm1" -Force
 Import-Module "$PSScriptRoot\..\Common\SubscriptionManagement" -Force
 Import-Module "$PSScriptRoot\..\UserConfig" -Force
 
