@@ -1,7 +1,7 @@
 ﻿# Invokes load generation on the tenant databases currently defined in the catalog.  
  
 # Duration of the load generation session. Some activity may continue after this time. 
-$DurationMinutes = 120
+$DurationMinutes = 12
 
 # If SingleTenant is enabled (scenario 4), this specifies the tenant database to be overloaded. 
 # If set to "" a random tenant database is chosen.
@@ -10,7 +10,7 @@ $SingleTenantDatabaseName = "contosoconcerthall"
 # If $true, generator will run once. If $false will keep looking for additional tenants and apply load to them 
 $OneTime = $false
 
-$DemoScenario = 0
+$DemoScenario = 1
 <# Select the demo scenario to run 
     Demo    Scenario
       0       None
@@ -52,7 +52,7 @@ if ($DemoScenario -eq 1)
     # start a new set of load generation jobs for the current databases with the load configuration above
     & $PSScriptRoot\..\Utilities\LoadGenerator.ps1 `
         -WtpResourceGroupName $wtpUser.ResourceGroupName `
-        -Wtpuser $wtpUser.Name `
+        -Wtpuser "sadmin" ## $wtpUser.Name `
         -Intensity $Intensity `
         -DurationMinutes $DurationMinutes `
         -OneTime $OneTime

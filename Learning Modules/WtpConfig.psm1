@@ -54,7 +54,7 @@ function Get-Configuration
         TenantAnalyticsCSDatabaseName = "tenantanalytics-cs"
         TenantAnalyticsDWDatabaseName = "tenantanalytics-dw"
         AdfStorageAccountNameStem = "wingtipstaging"
-        AdfConfigStorageLocation = "eastus"
+        AdfConfigStorageLocation = "westeurope"
         AdfConfigContainerName = "configfile"
         DataFactoryDeploymentTemplate = "adf_arm_template.json"
         DataFactoryNameStem = "dbtodwload-"

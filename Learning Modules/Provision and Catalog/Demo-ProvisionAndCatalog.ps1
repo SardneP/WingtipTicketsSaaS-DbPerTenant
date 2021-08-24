@@ -44,7 +44,7 @@ if ($DemoScenario -eq 1)
     {
         New-Tenant `
             -WtpResourceGroupName $wtpUser.ResourceGroupName `
-            -WtpUser $wtpUser.Name `
+            -WtpUser "sadmin" # $wtpUser.Name `
             -TenantName $TenantName `
             -ServerName $serverName `
             -PoolName $poolName `
